@@ -5,8 +5,10 @@ html {
 body {
     padding:.5em;
     overflow-x: hidden;
-    text-align:justify;
-    text-justify:inter-word;
+}
+
+* {
+    box-sizing:border-box;
 }
 
 .container {
@@ -102,29 +104,13 @@ body {
 
 /*TEXTS STYLING*/
 
-.texts div, .title, .container a, .question {
+.texts div, .title, .container a, .question, .beyond {
     padding:0em;
     margin:.75em; 
 }
 
 .texts div, .title {
     background:white;
-}
-
-.texts .hidden {
-    color:beige;
-    background:none;
-    opacity:0;
-    margin: -.75em .75em;
-    border:none;
-}
-
-.texts .hidden p {
-    display:inline;
-}
-
-.texts .hidden:hover {
-    opacity:1;
 }
 
 .texts {
@@ -135,18 +121,21 @@ body {
     justify-content: flex-start;
     align-content: flex-start;
     
+    margin-bottom:2em;
+    
 }
 
-.texts div, .title, .question {
+.texts div, .title, .question, .beyond {
     border: 1.5px black solid;
     
     padding:.75em;
 }
 
-.texts a {
+.description a {
     margin:0em;
 }
 
+/*
 .description a::after {
     content: "archival gap";
     color:transparent;
@@ -157,8 +146,9 @@ body {
     background-size: cover;
     background-position: center;
 }
+*/
 
-p, p:hover {
+.texts p, .texts p:hover {
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -175,19 +165,19 @@ p, p:hover {
     background-position: 50% 50%;
 }
 
-p {
+.texts p {
 /*    -webkit-text-fill-color: rgba(0,0,0,1);*/
 }
 
-p:nth-child(1) {
+.texts p:nth-child(1) {
     margin: 0;
 }
 
-p:last-child {
+.texts p:last-child {
     margin:0;
 }
 
-p:hover {
+.texts p:hover {
     -webkit-text-fill-color: rgba(0,0,0,0);
 }
 
@@ -238,28 +228,39 @@ p:hover {
     padding:0;
 }
 
-
-.question {
+/*HIDDEN STYLING*/
+.hidden {
     position:absolute;
-    right:0;
-    bottom:0;
+    top:2em;
+    right:2em;
+    height:auto;
     color:white;
-    background:black;
+    opacity:0.25;
+    border:none;
 }
 
+.hidden p {
+    display:inline;
+    filter:drop-shadow(10px 10px 1px rgba(0,0,0,.75));
+}
+
+.hidden:hover {
+    opacity:1;
+}
+
+/*BEYOND STYLING*/
 .beyond {
     position:absolute;
-    left:-1em;
+    left:0em;
     bottom:-2em;
     z-index:0;
-    padding:0;
-    margin:0;
     
-    width:100vw;
-    height:2em;
-    background:url("../assets/TESTS/trace_contoured/crib3%20_bitmap_cleanwords%20pattern_300dpi).png");
-    background-size:cover;
-    background-position:center;
+/*    based off of dimensions of .container .texts*/
+    width:50%;
+    max-width: calc(1100px / 2);
+    
+    height:4em;
+    overflow:hidden;
     
     
     -webkit-mask-image:-webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.4) 75%, rgba(0,0,0,.75) 100%);
