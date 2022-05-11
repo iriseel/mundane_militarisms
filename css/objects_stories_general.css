@@ -1,0 +1,268 @@
+html {
+/*    background:white;*/
+}
+
+body {
+    padding:.5em;
+    overflow-x: hidden;
+    text-align:justify;
+    text-justify:inter-word;
+}
+
+.container {
+    width:100%;
+    max-width: 1100px;
+    position:relative;
+    
+    display:flex;
+    flex-flow: row wrap;
+    
+    margin: auto;
+    
+/*    height:100vh;*/
+   
+}
+
+.draggable {
+    cursor:grab;
+}
+
+/*NAV STYLING*/
+.nav {
+    position:sticky;
+    z-index:30;
+    top:0;
+    width:100%;
+    
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    
+    margin-bottom: 1em;
+}
+
+.nav div {
+    max-width:5%;
+    height: 3vh;
+}
+
+.nav_icon {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-content:center;
+    position:relative;
+}
+
+.nav_icon a {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-content:center;
+}
+
+.nav_icon img {
+    max-width:100%;
+    height:auto;
+    max-height:100%;
+    filter: grayscale(100%) opacity(75%);
+
+/*    border:1px solid blue;*/
+}
+
+.nav_icon img:hover {
+  filter: grayscale(0%);
+}
+
+.nav_icon p {
+    font-size:.5em;
+    opacity:0;
+    
+    visibility:hidden;
+    position:absolute;
+    top: 3vh;
+    width:19em;
+    
+    text-align: center;
+/*    border:1px solid blue;*/
+    
+}
+
+.nav_icon:hover p {
+   opacity:1; 
+    visibility:visible;
+}
+
+.nav span {
+    background:white;
+    padding:.25em;
+}
+
+/*TEXTS STYLING*/
+
+.texts div, .title, .container a, .question {
+    padding:0em;
+    margin:.75em; 
+}
+
+.texts div, .title {
+    background:white;
+}
+
+.texts .hidden {
+    color:beige;
+    background:none;
+    opacity:0;
+    margin: -.75em .75em;
+    border:none;
+}
+
+.texts .hidden p {
+    display:inline;
+}
+
+.texts .hidden:hover {
+    opacity:1;
+}
+
+.texts {
+    width:50%;
+    left:0;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    
+}
+
+.texts div, .title, .question {
+    border: 1.5px black solid;
+    
+    padding:.75em;
+}
+
+.texts a {
+    margin:0em;
+}
+
+.description a::after {
+    content: "archival gap";
+    color:transparent;
+    width:2em;
+    height:1em;
+    background:url(../assets/aika/COMFORT_WOMEN/statue2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+p, p:hover {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+
+    -webkit-transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
+
+    -webkit-background-clip: text;
+
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
+}
+
+p {
+/*    -webkit-text-fill-color: rgba(0,0,0,1);*/
+}
+
+p:nth-child(1) {
+    margin: 0;
+}
+
+p:last-child {
+    margin:0;
+}
+
+p:hover {
+    -webkit-text-fill-color: rgba(0,0,0,0);
+}
+
+
+/*ALBUM STYLING*/
+.album {
+    position:absolute;
+    right:0;
+    top:0;
+    margin:0;
+    padding:0;
+    width:50%;
+    
+    display:flex;
+    flex-flow: column wrap;
+    justify-content:center;
+    align-content:center;
+}
+
+/*FAILURE
+.sticky {
+    position: -webkit-sticky;
+    position:sticky;
+    top:0;
+    align-self: flex-start;
+}
+*/
+
+.album .photo {
+    position:relative;
+    display:inline-block;
+    width:100%;
+    margin: 1em 0;
+    filter:drop-shadow(16px 16px 10px rgba(0,0,0,.75));
+}
+
+.photo img {
+    width:100%;
+    
+/*    to override general styling for .photo img*/
+    max-height: none;
+    
+}
+
+.photo {
+    display:inline-block;
+    margin:0;
+    padding:0;
+}
+
+
+.question {
+    position:absolute;
+    right:0;
+    bottom:0;
+    color:white;
+    background:black;
+}
+
+.beyond {
+    position:absolute;
+    left:-1em;
+    bottom:-2em;
+    z-index:0;
+    padding:0;
+    margin:0;
+    
+    width:100vw;
+    height:2em;
+    background:url("../assets/TESTS/trace_contoured/crib3%20_bitmap_cleanwords%20pattern_300dpi).png");
+    background-size:cover;
+    background-position:center;
+    
+    
+    -webkit-mask-image:-webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.4) 75%, rgba(0,0,0,.75) 100%);
+      mask-image: -webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.4) 75%, rgba(0,0,0,.75) 100%);
+    
+}

@@ -1,0 +1,30 @@
+.photo:nth-child(1) {
+    left:10%;
+    transform:rotate(-2deg);
+}
+
+.photo:nth-child(2)  {
+    left:-10%;
+    transform:rotate(5deg);
+}
+
+.photo:nth-child(3)  {
+    left:40%;
+    transform:rotate(-3deg);
+}
+
+.photo:nth-child(4)  {
+    left:-10%;
+    transform:rotate(3deg);
+}
+
+
+p:nth-of-type(even):hover {
+    
+    background-image: url(../../assets/aika/COMFORT_WOMEN/statue1.jpeg);
+}
+
+
+p:nth-of-type(odd):hover {
+    background-image: url(../../assets/aika/COMFORT_WOMEN/statue4.jpeg);
+}

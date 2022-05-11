@@ -1,0 +1,321 @@
+html {
+  background: beige;
+}
+
+body {
+  font-family: sans-serif;
+  cursor: default;
+  max-width: 100vw;
+}
+
+/* * {
+    font-family: default;
+    box-sizing: border-box;
+} */
+
+h1 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 12pt;
+}
+
+h2 ul{
+  padding: 0;
+  font-weight: normal;
+  text-align: center;
+  font-size: 12pt;
+}
+
+/* #myCheck, #myCheck1 {
+  cursor: pointer;
+} */
+
+.header {
+  position: relative;
+  z-index: 20;
+}
+
+.objects {
+  cursor: grab;
+  background: white;
+  border: 2px black solid;
+  position:relative;
+  color: black;
+  max-width:500px;
+  text-align: left;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0
+  top: 0;
+  z-index: 20;
+}
+
+.objects:active {
+  cursor: grabbing;
+}
+
+.objects p {
+  padding: 1em;
+  margin: 0;
+}
+
+/* ul#people {
+  display: none;
+  position:relative;
+  color: black;
+  max-width:500px;
+  text-align: left;
+  padding-left: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0
+  top: 0;
+} */
+
+.intro p{
+  position:relative;
+  color: black;
+  max-width:500px;
+  text-align: left;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0
+  top: 0;
+}
+
+.photo {
+  display: inline-block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+}
+
+img {
+    /* effect by https://stackoverflow.com/questions/6008324/fade-effect-on-link-hover */
+  /* First we need to help some browsers along for this to work.
+  Just because a vendor prefix is there, doesn't mean it will
+  work in a browser made by that vendor either, it's just for
+  future-proofing purposes I guess. */
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+.photo img {
+  cursor: grab;
+  z-index: 10;
+  max-height: 20em;
+  filter: grayscale(100%) opacity(75%);
+  contain: content;
+}
+
+.photo img:active {
+  cursor: grabbing;
+}
+
+.photo img:hover {
+  filter: grayscale(0%);
+}
+
+a:link {
+  color: black;
+  text-decoration: ;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:visited:hover {
+  color: blue;
+}
+
+a:visited {
+  color: gray;
+}
+
+.about {
+  position:relative;
+  color: black;
+  max-width:500px;
+  text-align: left;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0
+  top: 0;
+}
+
+
+/* objects */
+
+#wombchair {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#cardboardcrib {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#gasmask {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#fdrletter {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#twilightstruggle {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#cannedmeat {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#magiccarpet {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#comfortwomen {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#strawsandals {
+  position: absolute;
+  z-index:90;
+  text-align: center;
+}
+
+#godzilla {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#cardboardlunchbox {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#yuccamountain {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#woodencart {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#monsanto {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#donationcard {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#silentghosts {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#chinesescarecrow {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#kodachromeslide {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#projector {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+/* #earthball {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+}
+
+#friendshipbridge {
+  position: absolute;
+  z-index: 90;
+  text-align: center;
+} */
+
+
+
+/* .album img {
+  display: inline-block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  max-width: 100%;
+  border: 2px black solid;
+}
+
+.album {
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.album > div {
+    display: inline-block;
+    z-index: 100;
+    width:30%;
+    height:30vh;
+    overflow: hidden;
+    padding:0;
+    margin:1%;
+    contain: content;
+} */
