@@ -1,0 +1,128 @@
+/*STYLINGS MODIFIED FROM OTHER STYLES*/
+
+/*FROM object_stories_general.css*/
+
+/*HIDDEN STYLING*/
+.hidden {
+    position:absolute;
+    height:auto;
+    opacity:0.15;
+    
+    text-decoration: none;
+    
+}
+
+.hidden p {
+    color:beige;
+    display:inline;
+    filter:drop-shadow(1px 1px 2px rgba(0,0,0,.75));
+}
+
+.hidden:hover {
+    opacity:.5;
+}
+
+/*BEYOND STYLING*/
+
+a.nolink {
+    position:relative;
+    display:block;
+    height:10em;
+    overflow-y:hidden;
+    width:90%;
+    margin: auto;
+    
+    padding:.75em;
+    overflow:hidden;
+}
+
+.beyond {
+    position:absolute;
+    left:0em;
+    bottom:-4em;
+    height:8em;
+    z-index:0;
+    
+    margin:auto;
+    left:0;
+    right:0;
+    
+    opacity:.1;
+    
+    border: 1.5px black solid;
+    
+    padding:.75em;
+    
+    
+/*gradient mask
+    -webkit-mask-image:-webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.4) 75%, rgba(0,0,0,.75) 100%);
+      mask-image: -webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.4) 75%, rgba(0,0,0,.75) 100%);
+*/
+}
+
+.beyond, .beyond a, a .beyond, .nolink {
+    transition:.5s;
+    text-decoration: none;
+}
+
+.beyond:hover, .beyond a:hover, a .beyond:hover {
+    
+    text-decoration: none;
+}
+
+
+.beyond:hover {
+    opacity:.75;
+}
+
+a:hover .beyond {
+    color:black;
+}
+
+
+/*FROM collective_paper.css*/
+
+.collective_paper {
+    width:100%;
+    column-count: 5;
+    column-gap: 2em;
+/*    column-width: 500px;*/
+/*    column-rule: 1px dashed black;*/
+    hyphens: auto;
+}
+
+
+.section_header {
+    margin-bottom:2em;
+    color:blue;
+    
+    /*taken from HIDDEN STYLING*/
+    opacity:0.15;
+    color:beige;
+    filter:drop-shadow(1px 1px 2px rgba(0,0,0,.75));
+}
+
+.section_header:hover {
+    opacity:.5;
+}
+
+h6 {
+    
+}
+
+.subsection {
+    border: 1px solid black;
+}
+
+
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 800px) {
+
+    .collective_paper {
+
+        column-count: 3;
+    }
+    
+}

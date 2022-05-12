@@ -19,11 +19,16 @@ h1 {
   font-size: 12pt;
 }
 
-h2 ul{
+h2 ul, h3 {
   padding: 0;
   font-weight: normal;
   text-align: center;
   font-size: 12pt;
+}
+
+
+h3 {
+  font-size: .75em;
 }
 
 /* #myCheck, #myCheck1 {
@@ -225,6 +230,11 @@ a:visited {
   position: absolute;
   z-index: 90;
   text-align: center;
+}
+
+/*    special image sizing for low-res*/
+#cardboardlunchbox img {
+    max-width:200px;
 }
 
 #yuccamountain {

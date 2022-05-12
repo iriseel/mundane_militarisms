@@ -33,7 +33,7 @@ body {
 .nav {
     position:sticky;
     z-index:30;
-    top:0;
+    top:1em;
     width:100%;
     
     display:flex;
@@ -80,6 +80,7 @@ body {
 
 .nav_icon p {
     font-size:.5em;
+    line-height: 1.5em;
     opacity:0;
     
     visibility:hidden;
@@ -104,7 +105,7 @@ body {
 
 /*TEXTS STYLING*/
 
-.texts div, .title, .container a, .question, .beyond {
+.texts div, .title, .container a, .beyond p {
     padding:0em;
     margin:.75em; 
 }
@@ -117,15 +118,16 @@ body {
     width:50%;
     left:0;
     display:flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
+/*    MUST have this as nowrap, or else weird spacing is added at end of each .texts div when resizing viewport for whatever reason*/
+    flex-flow: column nowrap;
+    justify-content:center;
     align-content: flex-start;
     
-    margin-bottom:2em;
+    margin-bottom:6em;
     
 }
 
-.texts div, .title, .question, .beyond {
+.texts div, .title, .beyond p {
     border: 1.5px black solid;
     
     padding:.75em;
@@ -148,13 +150,15 @@ body {
 }
 */
 
-.texts p, .texts p:hover {
+.texts p, .texts p:hover, .hidden, a, .beyond {
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
     transition:.5s;
+}
 
+.texts p, .texts p:hover {
     -webkit-transition: background-image 0.5s ease-in-out;
     transition: background-image 0.5s ease-in-out;
 
@@ -186,7 +190,8 @@ body {
 .album {
     position:absolute;
     right:0;
-    top:0;
+/*    to counteract the "Back" link at top of .texts*/
+    top:2em;
     margin:0;
     padding:0;
     width:50%;
@@ -231,39 +236,51 @@ body {
 /*HIDDEN STYLING*/
 .hidden {
     position:absolute;
-    top:2em;
-    right:2em;
     height:auto;
-    color:white;
-    opacity:0.25;
+    opacity:0.15;
     border:none;
+    
+    text-decoration: none;
+    
 }
 
 .hidden p {
+    color:beige;
     display:inline;
-    filter:drop-shadow(10px 10px 1px rgba(0,0,0,.75));
+    filter:drop-shadow(1px 1px 2px rgba(0,0,0,.75));
 }
 
 .hidden:hover {
-    opacity:1;
+    opacity:.5;
 }
 
 /*BEYOND STYLING*/
 .beyond {
     position:absolute;
     left:0em;
-    bottom:-2em;
+    bottom:-6em;
     z-index:0;
     
 /*    based off of dimensions of .container .texts*/
     width:50%;
     max-width: calc(1100px / 2);
     
-    height:4em;
+    height:8em;
     overflow:hidden;
     
+    opacity:.1;
     
-    -webkit-mask-image:-webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.4) 75%, rgba(0,0,0,.75) 100%);
-      mask-image: -webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.4) 75%, rgba(0,0,0,.75) 100%);
     
+/*gradient mask
+    -webkit-mask-image:-webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.4) 75%, rgba(0,0,0,.75) 100%);
+      mask-image: -webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.4) 75%, rgba(0,0,0,.75) 100%);
+*/
+}
+
+.beyond:hover {
+    opacity:.75;
+}
+
+a:hover .beyond {
+    color:black;
 }
