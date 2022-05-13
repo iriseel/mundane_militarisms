@@ -1,0 +1,58 @@
+/*photos styling*/
+.photo:nth-child(1) {
+    left:-10%;
+    transform:rotate(3deg);
+}
+
+.photo:nth-child(2)  {
+    left:10%;
+    transform:rotate(-4deg);
+}
+
+.photo:nth-child(3)  {
+    left:30%;
+    transform:rotate(-3deg);
+}
+
+.photo:nth-child(4)  {
+    left:-10%;
+    transform:rotate(3deg);
+}
+
+.photo:nth-child(5)  {
+    left:0%;
+    transform:rotate(3deg);
+}
+
+
+
+/*texts clip styling*/
+.texts p:nth-of-type(even):hover {
+    
+    background-image: url(../../assets/aika/GHOSTS/ghosts1.jpeg);
+}
+
+
+.texts p:nth-of-type(odd):hover {
+    background-image: url(../../assets/aika/GHOSTS/ghosts2.jpeg);
+}
+
+
+
+
+/*hidden styling*/
+.hidden:nth-of-type(1) {
+    top:16em;
+    right:3em;
+}
+
+
+.hidden:nth-of-type(2) {
+    top:40em;
+    right:5em;
+}
+
+.hidden:nth-of-type(3) {
+    top:90em;
+    right:5em;
+}

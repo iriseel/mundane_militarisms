@@ -9,6 +9,8 @@ body {
 
 * {
     box-sizing:border-box;
+    /* mainly for links in citations rn so they don't overflow their textboxes*/
+    overflow-wrap: break-word;
 }
 
 .container {
@@ -159,6 +161,7 @@ body {
 }
 
 .texts p, .texts p:hover {
+/*    ??added this to try to get background-image clip to transition on hover like the photos, but not working rn*/
     -webkit-transition: background-image 0.5s ease-in-out;
     transition: background-image 0.5s ease-in-out;
 
