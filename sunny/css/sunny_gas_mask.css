@@ -35,12 +35,12 @@
 /*texts clip styling*/
 .texts p:nth-of-type(even):hover {
     
-    background-image: url(../../assets/);
+    background-image: url(../../assets/sunny/GAS_MASK/gasmask1.jpeg);
 }
 
 
 .texts p:nth-of-type(odd):hover {
-    background-image: url(../../assets/);
+    background-image: url(../../assets/sunny/GAS_MASK/gasmask3.jpeg);
 }
 
 

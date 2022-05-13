@@ -35,12 +35,12 @@
 /*texts clip styling*/
 .texts p:nth-of-type(even):hover {
     
-    background-image: url(../../assets/);
+    background-image: url(../../assets/minh/CARDBOARD_LUNCHBOXES/lunchbox1.png);
 }
 
 
 .texts p:nth-of-type(odd):hover {
-    background-image: url(../../assets/);
+    background-image: url(../../assets/minh/CARDBOARD_LUNCHBOXES/lunchbox2.png);
 }
 
 
