@@ -33,12 +33,12 @@
 
 .texts p:nth-of-type(even):hover {
     
-/*    background-image: url(../../assets/);*/
+    background-image: url(../../assets/alex/EARTHBALL/earthball1.jpeg);
 }
 
 
 .texts p:nth-of-type(odd):hover {
-/*    background-image: url(../../assets/);*/
+    background-image: url(../../assets/alex/EARTHBALL/earthball2.jpeg);
 }
 
 .hidden:nth-of-type(1) {
