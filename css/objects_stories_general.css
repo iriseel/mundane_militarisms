@@ -237,6 +237,7 @@ body {
 }
 
 /*HIDDEN STYLING*/
+/*
 .hidden {
     position:absolute;
     height:auto;
@@ -256,6 +257,7 @@ body {
 .hidden:hover {
     opacity:.5;
 }
+*/
 
 /*BEYOND STYLING*/
 .beyond {

@@ -1,57 +1,47 @@
+body {
+    margin:0;
+    padding:0em 0.5em;
+    overflow-x:hidden;
+}
+
+
 /*STYLINGS MODIFIED FROM OTHER STYLES*/
 
 /*FROM object_stories_general.css*/
-
-/*HIDDEN STYLING*/
-.hidden {
-    position:absolute;
-    height:auto;
-    opacity:0.15;
-    
-    text-decoration: none;
-    
-}
-
-.hidden p {
-    color:beige;
-    display:inline;
-    filter:drop-shadow(1px 1px 2px rgba(0,0,0,.75));
-}
-
-.hidden:hover {
-    opacity:.5;
-}
 
 /*BEYOND STYLING*/
 
 a.nolink {
     position:relative;
     display:block;
-    height:10em;
+    height:14em;
     overflow-y:hidden;
-    width:90%;
-    margin: auto;
+    width:100%;
+    margin: 10em auto 0 auto;
     
-    padding:.75em;
+    padding:0;
     overflow:hidden;
 }
 
 .beyond {
+    
     position:absolute;
     left:0em;
-    bottom:-4em;
-    height:8em;
+    bottom:0em;
+    height:14em;
     z-index:0;
     
     margin:auto;
     left:0;
     right:0;
     
-    opacity:.1;
+    opacity:.3;
     
-    border: 1.5px black solid;
+/*    border: 1.5px black solid;*/
     
-    padding:.75em;
+    padding:0;
+    
+    overflow:hidden;
     
     
 /*gradient mask
@@ -72,7 +62,7 @@ a.nolink {
 
 
 .beyond:hover {
-    opacity:.75;
+    opacity:1;
 }
 
 a:hover .beyond {
@@ -82,47 +72,242 @@ a:hover .beyond {
 
 /*FROM collective_paper.css*/
 
-.collective_paper {
-    width:100%;
-    column-count: 5;
-    column-gap: 2em;
-/*    column-width: 500px;*/
-/*    column-rule: 1px dashed black;*/
+.beyond * { 
+    box-sizing:border-box;
+    /* mainly for links in citations rn so they don't overflow their textboxes*/
+    overflow-wrap: break-word;
+}
+
+.beyond {
+    /*specially nulled*/
+/*    padding:0.5em;    */
+    overflow-x: hidden;
+    line-height:1.35em;
+    position:relative;
+}
+
+.beyond .back {
+    position:fixed;
+    top:0.5em;
+    
+}
+
+.beyond .collective_paper {
+    margin-top:1em;
+    display:flex;
+    justify-content:space-between;
+    position:relative;
     hyphens: auto;
-}
-
-
-.section_header {
-    margin-bottom:2em;
-    color:blue;
-    
-    /*taken from HIDDEN STYLING*/
-    opacity:0.15;
-    color:beige;
-    filter:drop-shadow(1px 1px 2px rgba(0,0,0,.75));
-}
-
-.section_header:hover {
-    opacity:.5;
-}
-
-h6 {
     
 }
 
-.subsection {
-    border: 1px solid black;
+.beyond .section:not(:first-child) {
+    margin-top:calc(1.35em * 3);
+}
+
+.beyond .title {
+    width:20vw; 
+    padding: 0 .5em;
+    position:relative;
+    
+/*    background:blue;*/
+}
+
+.beyond .title_top {
+    /*specially changed from fixed to relative*/
+    position:relative;
+    /*specially nulled*/
+/*    left:0.5em;*/
+    
+    width: 20vw;
+    /*specially changed from padding: 0 1em 0 0.5em;*/
+    padding: 0 1em 0 0 ;
+}
+
+/*specially nulled*/
+/*
+.beyond .title_bottom {
+    position:fixed;
+    bottom:1em;
+    left:2em;
+    width: calc(20vw - 1.5em);
+    padding: 0 1em 0 0.5em;
+    
+    text-indent: -1.5em;
+}
+*/
+
+
+.beyond .main_body {
+    width:40vw;
+/*    max-width: 400px;*/
+    padding: 0 .5em;
+    
+/*    background:orange;*/
+}
+
+
+.beyond .footnotes {
+    width:15vw;
+    padding: 0 .5em;
+    
+    position:relative;
+    
+/*    background:pink;*/
+}
+
+.beyond .extra {
+    width:25vw;
+    padding: 0 .5em;
+    
+/*    background:purple;*/
+    
+}
+
+
+.beyond .footnote_text {
+    position:absolute;
+    left:0;
+   
+    width:calc(15vw - .5em);
+    padding: 0 .5em;
+    
+    /*    needs this negative top margin because sup interferes with line height; value also changes depending on margin-top of .collective_paper*/
+    margin-top:-2rem;
+    
+    font-size:.75em;
+    line-height:1.35em;
+    
+}
+
+.beyond sup {
+    font-size:1rem;
+    border-bottom: 1.5px solid black;
+}
+
+.beyond h1, .beyond h2 {
+    font-style:normal;
+    font-weight:normal;
+    font-size:1em;
+    padding:0;
+    margin:.5em 0em;
+    text-align:left;
+}
+
+.beyond h2 {
+    
+    
+    text-decoration:underline;
+}
+
+.beyond hr {
+    width:50%;
+    border-top: 1.5px solid black;
+    
+}
+
+.beyond .footnote_text p {
+    margin-top:0;
+    margin-bottom:0.5em;
+    
+}
+
+.beyond .screenshot {
+    width:calc(40vw);
+    padding: 0 0.5em 0 0;
+}
+
+.beyond .screenshot img {
+    max-width:100%;
+}
+
+.beyond .screenshot.tile img {
+    max-width: 48%;
+    display:inline;
+    
+}
+
+.beyond .section.bibliography {
+    margin-top:calc(1.35em * 15);
+    width:calc(40vw + 15vw);
 }
 
 
 
 
-/*RESPONSIVE*/
-@media screen and (max-width: 800px) {
 
-    .collective_paper {
+/*texts clip styling*/
 
-        column-count: 3;
-    }
+.beyond .extra p, .beyond .extra p:hover, .beyond .extra h2, .beyond .extra h2:hover {
+/*    ??added this to try to get background-image clip to transition on hover like the photos, but not working rn*/
+    -webkit-transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
+
+    -webkit-background-clip: text;
+
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
+}
+
+
+.beyond .extra p:hover, .beyond .extra h2:hover {
+    -webkit-text-fill-color: rgba(0,0,0,0);
+}
+
+.beyond .extra h2:hover {
+    background-image: url(../assets/aika/COMFORT_WOMEN/statue1.jpeg);
+}
+
+.beyond .extra p:nth-child(1):hover {
     
+    background-image: url(../assets/aika/COMFORT_WOMEN/statue1.jpeg);
+}
+
+.beyond .extra p:nth-child(2):hover {
+    background-image: url(../assets/aika/COMFORT_WOMEN/statue2.jpeg);
+}
+
+.beyond .extra p:nth-child(3):hover {
+    background-image: url(../assets/alex/EARTHBALL/earthball1.jpeg);
+}
+
+.beyond .extra p:nth-child(4):hover {
+    background-image: url(../assets/alex/EARTHBALL/earthball2.jpeg);
+}
+
+.beyond .extra p:nth-child(5):hover {
+    background-image: url(../assets);
+}
+
+.beyond .extra p:nth-child(6):hover {
+    background-image: url(../assets);
+}
+
+.beyond .extra p:nth-child(7):hover {
+    background-image: url(../assets);
+}
+
+.beyond .extra p:nth-child(8):hover {
+    background-image: url(../assets);
+}
+
+.beyond .extra p:nth-child(9):hover {
+    background-image: url(../assets);
+}
+
+.beyond .extra p:nth-child(10):hover {
+    background-image: url(../assets);
+}
+
+.beyond .extra p:nth-child(11):hover {
+    background-image: url(../assets);
+}
+
+.beyond .extra p:nth-child(12):hover {
+    background-image: url(../assets);
+}
+
+.beyond .extra p:nth-child(13):hover {
+    background-image: url(../assets);
 }
