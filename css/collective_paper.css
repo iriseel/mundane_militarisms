@@ -32,6 +32,14 @@ body {
     margin-top:calc(1.35em * 3);
 }
 
+.title, .main_body, .footnotes, .extra_stuff, .footnote_text, .extra {
+    padding: 0 .5em;
+}
+
+.footnotes, .extra_stuff {
+    position:relative;
+}
+
 .title {
     width:20vw; 
     padding: 0 .5em;
@@ -58,46 +66,61 @@ body {
     text-indent: -1.5em;
 }
 
-
 .main_body {
     width:40vw;
 /*    max-width: 400px;*/
-    padding: 0 .5em;
-    
+
 /*    background:orange;*/
 }
 
 
 .footnotes {
     width:15vw;
-    padding: 0 .5em;
-    
-    position:relative;
     
 /*    background:pink;*/
 }
 
-.extra {
+.extra_stuff {
     width:25vw;
-    padding: 0 .5em;
     
 /*    background:purple;*/
     
 }
-
 
 .footnote_text {
     position:absolute;
     left:0;
    
     width:calc(15vw - .5em);
-    padding: 0 .5em;
     
     /*    needs this negative top margin because sup interferes with line height; value also changes depending on margin-top of .collective_paper*/
     margin-top:-2rem;
     
     font-size:.75em;
     line-height:1.35em;
+    
+}
+
+.extra {
+    position:absolute;
+    left:0;
+   
+    width:calc(25vw - .5em);
+    
+    font-size:1em;
+    line-height:1.35em;
+    
+    margin-top:-2rem;
+    
+}
+
+h2.extra {
+ transform:translateY(calc(-1.35em - .7em));
+}
+
+.footnote_text p, .extra p {
+    margin-top:0;
+    margin-bottom:0.5em;
     
 }
 
@@ -117,19 +140,12 @@ h1, h2 {
 
 h2 {
     
-    
     text-decoration:underline;
 }
 
 hr {
     width:50%;
     border-top: 1.5px solid black;
-    
-}
-
-.footnote_text p {
-    margin-top:0;
-    margin-bottom:0.5em;
     
 }
 
@@ -159,7 +175,7 @@ hr {
 
 /*texts clip styling*/
 
-.extra p, .extra p:hover, .extra h2, .extra h2:hover {
+p.extra:hover, h2.extra:hover, div.extra p:hover {
 /*    ??added this to try to get background-image clip to transition on hover like the photos, but not working rn*/
     -webkit-transition: background-image 0.5s ease-in-out;
     transition: background-image 0.5s ease-in-out;
@@ -172,63 +188,145 @@ hr {
 }
 
 
-.extra p:hover, .extra h2:hover {
+p.extra:hover, h2.extra:hover, div.extra p:hover {
     -webkit-text-fill-color: rgba(0,0,0,0);
 }
 
-.extra h2:hover {
+.extra[data-value="0"]:hover, p[data-value="0"]:hover {
     background-image: url(../assets/aika/COMFORT_WOMEN/statue1.jpeg);
 }
 
-.extra p:nth-child(1):hover {
-    
-    background-image: url(../assets/aika/COMFORT_WOMEN/statue1.jpeg);
+.extra[data-value="1"]:hover, p[data-value="1"]:hover{
+    background-image: url(../assets/aika/GHOSTS/ghosts1.jpeg);
 }
 
-.extra p:nth-child(2):hover {
-    background-image: url(../assets/aika/COMFORT_WOMEN/statue2.jpeg);
+.extra[data-value="2"]:hover, p[data-value="2"]:hover {
+    background-image: url(../assets/aika/COMFORT_WOMEN/statue3.jpeg);
 }
 
-.extra p:nth-child(3):hover {
+.extra[data-value="3"]:hover, p[data-value="3"]:hover {
     background-image: url(../assets/alex/EARTHBALL/earthball1.jpeg);
 }
 
-.extra p:nth-child(4):hover {
+.extra[data-value="4"]:hover, p[data-value="4"]:hover {
+    background-image: url(../assets/alex/TWILIGHT_STRUGGLE/twilight1.jpeg);
+}
+
+.extra[data-value="5"]:hover, p[data-value="5"]:hover {
+    background-image: url(../assets/cathy/FRANKLIN_D_ROOSEVELT/letter1.jpeg);
+}
+
+.extra[data-value="6"]:hover, p[data-value="6"]:hover {
+    background-image: url(../assets/cathy/WOODEN_CART/cart1.jpeg);
+}
+
+.extra[data-value="7"]:hover, p[data-value="7"]:hover {
+    background-image: url(../assets/henry/CHINESE_SCARECROW/scarecrow3.jpeg);
+}
+
+.extra[data-value="8"]:hover, p[data-value="8"]:hover {
+    background-image: url(../assets/henry/STRAW_SANDALS/sandals1.jpeg);
+}
+
+.extra[data-value="9"]:hover, p[data-value="9"]:hover {
+    background-image: url(../assets/jess/CANNED_MEAT/tushonka1.jpeg);
+}
+
+.extra[data-value="10"]:hover, p[data-value="10"]:hover {
+    background-image: url(../assets/jess/DONATION_CARDS/cards1.png);
+}
+
+.extra[data-value="11"]:hover, p[data-value="11"]:hover {
+    background-image: url(../assets/jessica/KODACHROME/kodachrome1.jpeg);
+}
+
+.extra[data-value="12"]:hover, p[data-value="12"]:hover {
+    background-image: url(../assets/jessica/WAR_PROJECTIONS/projections1.jpeg);
+}
+
+.extra[data-value="13"]:hover, p[data-value="13"]:hover {
+    background-image: url(../assets/maeva/GODZILLA_GOJIRA/godzilla2.jpeg);
+}
+.extra[data-value="14"]:hover, p[data-value="14"]:hover {
+    background-image: url(../assets/maeva/YUCCA_MOUNTAIN/yucca1.jpeg);
+}
+
+.extra[data-value="15"]:hover, p[data-value="15"]:hover {
+    background-image: url(../assets/minh/CARDBOARD_CRIBS/crib1.jpeg);
+}
+
+.extra[data-value="16"]:hover, p[data-value="16"]:hover {
+    background-image: url(../assets/minh/CARDBOARD_LUNCHBOXES/lunchbox1.png);
+}
+
+.extra[data-value="17"]:hover, p[data-value="17"]:hover {
+    background-image: url(../assets/siri/MAGICARP/magicarp1.jpeg);
+}
+.extra[data-value="18"]:hover, p[data-value="18"]:hover {
+    background-image: url(../assets/siri/MONSANTO/monsanto1.jpeg);
+}
+
+.extra[data-value="19"]:hover, p[data-value="19"]:hover {
+    background-image: url(../assets/sunny/GAS_MASK/gasmask1.jpeg);
+}
+
+.extra[data-value="20"]:hover, p[data-value="20"]:hover {
+    background-image: url(../assets/sunny/womb_chair/wombchair1.jpeg);
+}
+
+.extra[data-value="21"]:hover, p[data-value="21"]:hover {
+    background-image: url(../assets/aika/COMFORT_WOMEN/statue4.jpeg);
+}
+
+.extra[data-value="22"]:hover, p[data-value="22"]:hover {
     background-image: url(../assets/alex/EARTHBALL/earthball2.jpeg);
 }
 
-.extra p:nth-child(5):hover {
-    background-image: url(../assets);
+.extra[data-value="23"]:hover, p[data-value="23"]:hover {
+    background-image: url(../assets/cathy/FRANKLIN_D_ROOSEVELT/letter2.jpeg);
 }
 
-.extra p:nth-child(6):hover {
-    background-image: url(../assets);
+.extra[data-value="24"]:hover, p[data-value="24"]:hover {
+    background-image: url(../assets/henry/STRAW_SANDALS/sandals5.png);
 }
 
-.extra p:nth-child(7):hover {
-    background-image: url(../assets);
+.extra[data-value="25"]:hover, p[data-value="25"]:hover {
+    background-image: url(../assets/jessica/WAR_PROJECTIONS/projections3.png);
 }
 
-.extra p:nth-child(8):hover {
-    background-image: url(../assets);
+.extra[data-value="26"]:hover, p[data-value="26"]:hover {
+    background-image: url(../assets/maeva/GODZILLA_GOJIRA/godzilla3.jpeg);
 }
 
-.extra p:nth-child(9):hover {
-    background-image: url(../assets);
+.extra[data-value="27"]:hover, p[data-value="27"]:hover {
+    background-image: url(../assets/minh/CARDBOARD_LUNCHBOXES/lunchbox2.png);
 }
 
-.extra p:nth-child(10):hover {
-    background-image: url(../assets);
+.extra[data-value="28"]:hover, p[data-value="28"]:hover {
+    background-image: url(../assets/siri/MONSANTO/monsanto3.jpeg);
 }
 
-.extra p:nth-child(11):hover {
-    background-image: url(../assets);
+.extra[data-value="29"]:hover, p[data-value="29"]:hover {
+    background-image: url(../assets/sunny/womb_chair/wombchair2.jpeg);
 }
 
-.extra p:nth-child(12):hover {
-    background-image: url(../assets);
+.extra[data-value="30"]:hover, p[data-value="30"]:hover {
+    background-image: url(../assets/jess/CANNED_MEAT/tushonka3.jpeg);
 }
 
-.extra p:nth-child(13):hover {
-    background-image: url(../assets);
+.extra[data-value="31"]:hover, p[data-value="31"]:hover {
+    background-image: url(../assets/minh/CARDBOARD_CRIBS/crib2.jpeg);
 }
+
+.extra[data-value="32"]:hover, p[data-value="32"]:hover {
+    background-image: url(../assets/jess/DONATION_CARDS/cards4.png);
+}
+
+.extra[data-value="33"]:hover, p[data-value="33"]:hover {
+    background-image: url(../assets/jessica/KODACHROME/kodachrome4.jpeg);
+}
+
+.extra[data-value="34"]:hover, p[data-value="34"]:hover {
+    background-image: url(../assets/jess/DONATION_CARDS/cards5.png);
+}
+
