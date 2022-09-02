@@ -25,6 +25,7 @@ function check_footnote_offsets() {
     });
 };
 
+//EXTRA STUFF / SCRAPS CODING
 
 var extra_source_offsets = [];
 
@@ -41,16 +42,46 @@ function check_extra_offsets() {
     //    console.log("populating offsets");
     //    console.log(footnote_offsets);
 
-    $('.extra').each(function () {
+    $('.extra:not(.intro)').each(function () {
 
         var index = $(this).attr("data-index");
 
         $(this).css('top', extra_source_offsets[index]);
 
     //    console.log(index + "footnote_offset is" + footnote_offsets[index]);
-
+        
 
     });
+    
+    
+        $(".extra.intro").css({
+            "top": "auto", 
+            'bottom': extra_source_offsets[0]
+        });
+        
+        console.log("extra intro bottom is" + $(".extra.intro").css("bottom"));
+    
+    
+    
+//    var extra_intro_top = $('.extra[data-index="0"]').offset().top;
+////     console.log("extra_intro_top is" + extra_intro_top);
+//    
+//    var margin_top_px = $(".extra[data-index='1']").css("margin-top");
+//    
+//    var margin_top = parseInt(margin_top_px, 10);
+//    
+////    console.log("margin-top is" + margin_top);
+//    
+//    var extra_intro_top_plus_margin = extra_intro_top + margin_top;
+//    
+//    console.log("extra_intro_top_plus_margin is" + extra_intro_top_plus_margin);
+//    
+//    $('.extra.intro').css({
+////        'top': "auto",
+//        'bottom': extra_intro_top_plus_margin
+//    });
+//    
+//     console.log($('.extra.intro').offset().top);
 };
 
 const myTimeout = setTimeout(find_bg, 100);

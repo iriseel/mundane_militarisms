@@ -114,8 +114,9 @@ body {
     
 }
 
-h2.extra {
- transform:translateY(calc(-1.35em - .7em));
+.extra.intro {
+/* transform:translateY(calc(-1.35em - .7em));*/
+    
 }
 
 .footnote_text p, .extra p {
