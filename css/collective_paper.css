@@ -114,9 +114,15 @@ body {
     
 }
 
-.extra.intro {
-/* transform:translateY(calc(-1.35em - .7em));*/
+.extra.intro p {
+    margin-bottom:1em;
+    padding-bottom:.5em;
     
+    border-bottom: 1.5px solid black;
+}
+
+
+.extra.intro {
 }
 
 .footnote_text p, .extra p {
@@ -176,7 +182,7 @@ hr {
 
 /*texts clip styling*/
 
-p.extra:hover, h2.extra:hover, div.extra p:hover {
+p.extra:hover, .extra h2:hover, div.extra p:hover {
 /*    ??added this to try to get background-image clip to transition on hover like the photos, but not working rn*/
     -webkit-transition: background-image 0.5s ease-in-out;
     transition: background-image 0.5s ease-in-out;
@@ -189,11 +195,11 @@ p.extra:hover, h2.extra:hover, div.extra p:hover {
 }
 
 
-p.extra:hover, h2.extra:hover, div.extra p:hover {
+p.extra:hover, .extra h2:hover, div.extra p:hover {
     -webkit-text-fill-color: rgba(0,0,0,0);
 }
 
-.extra[data-value="0"]:hover, p[data-value="0"]:hover {
+.extra[data-value="0"]:hover, p[data-value="0"]:hover, h2[data-value="0"]:hover {
     background-image: url(../assets/aika/COMFORT_WOMEN/statue1.jpeg);
 }
 

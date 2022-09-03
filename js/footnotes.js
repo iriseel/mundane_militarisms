@@ -53,37 +53,21 @@ function check_extra_offsets() {
 
     });
     
+    var extra_intro_height = $(".extra.intro").height();
+    
+//    console.log("extra intro height is" + extra_intro_height);
+    
+    var extra_intro_y = extra_source_offsets[0] - extra_intro_height;
     
         $(".extra.intro").css({
-            "top": "auto", 
-            'bottom': extra_source_offsets[0]
+            "top": extra_intro_y
         });
         
-        console.log("extra intro bottom is" + $(".extra.intro").css("bottom"));
-    
-    
-    
-//    var extra_intro_top = $('.extra[data-index="0"]').offset().top;
-////     console.log("extra_intro_top is" + extra_intro_top);
-//    
-//    var margin_top_px = $(".extra[data-index='1']").css("margin-top");
-//    
-//    var margin_top = parseInt(margin_top_px, 10);
-//    
-////    console.log("margin-top is" + margin_top);
-//    
-//    var extra_intro_top_plus_margin = extra_intro_top + margin_top;
-//    
-//    console.log("extra_intro_top_plus_margin is" + extra_intro_top_plus_margin);
-//    
-//    $('.extra.intro').css({
-////        'top': "auto",
-//        'bottom': extra_intro_top_plus_margin
-//    });
-//    
-//     console.log($('.extra.intro').offset().top);
+//        console.log("extra intro top is" + $(".extra.intro").css("top"));
 };
 
+
+// FIND AND MATCH BACKGROUND IMAGES FOR TEXT
 const myTimeout = setTimeout(find_bg, 100);
 
 function find_bg() {

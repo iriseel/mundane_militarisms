@@ -85,7 +85,7 @@ h3 {
   top: 0;
 } */
 
-.intro p{
+#intro p{
   position:relative;
   color: black;
   max-width:500px;
