@@ -3,7 +3,8 @@ html {
 }
 
 body {
-    padding:.5em;
+    margin:0;
+    padding:0em 0.5em;
     overflow-x: hidden;
 }
 
@@ -118,12 +119,12 @@ body {
 
 /*TEXTS STYLING*/
 
-.texts div, .title, .container a, .beyond p {
+.texts div, .container .title, .container a {
     padding:0em;
     margin:.75em; 
 }
 
-.texts div, .title {
+.texts div, .container .title {
     background:white;
 }
 
@@ -136,11 +137,11 @@ body {
     justify-content:center;
     align-content: flex-start;
     
-    margin-bottom:6em;
+/*    margin-bottom:6em;*/
     
 }
 
-.texts div, .title, .beyond p {
+.texts div, .container .title {
     border: 1.5px black solid;
     
     padding:.75em;
@@ -271,20 +272,38 @@ body {
 */
 
 /*BEYOND STYLING*/
+
+a.nolink {
+    position:relative;
+    display:block;
+    height:14em;
+    overflow-y:hidden;
+    width:100%;
+    margin: 10em auto 0 auto;
+    
+    padding:0;
+    overflow:hidden;
+}
+
 .beyond {
+    
     position:absolute;
     left:0em;
-    bottom:-6em;
+    bottom:0em;
+    height:14em;
     z-index:0;
     
-/*    based off of dimensions of .container .texts*/
-    width:50%;
-    max-width: calc(1100px / 2);
+    margin:auto;
+    left:0;
+    right:0;
     
-    height:8em;
+    opacity:.3;
+    
+/*    border: 1.5px black solid;*/
+    
+    padding:0;
+    
     overflow:hidden;
-    
-    opacity:.1;
     
     
 /*gradient mask
@@ -293,14 +312,24 @@ body {
 */
 }
 
+.beyond, .beyond a, a .beyond, .nolink {
+    transition:.5s;
+    text-decoration: none;
+}
+
+.beyond:hover, .beyond a:hover, a .beyond:hover {
+    
+    text-decoration: none;
+}
+
+
 .beyond:hover {
-    opacity:.75;
+    opacity:1;
 }
 
 a:hover .beyond {
     color:black;
 }
-
 
 /*MEDIA RULES*/
 @media (max-width:1200px) {
